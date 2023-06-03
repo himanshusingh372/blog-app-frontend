@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "reactstrap";
+import Base from "./Components/Base";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import UserDashboard from "./Pages/private-routers/UserDashboard";
+import PrivateRouter from "./Components/PrivateRouter";
+import ProfileInfo from "./Pages/private-routers/ProfileInfo";
+import PostPage from "./Pages/PostPage";
+import UserProvider from "./context/UserProvider";
+import Categories from "./Pages/Categories";
+import UpdateBlog from "./Pages/UpdateBlog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <BrowserRouter>
+        <ToastContainer position="bottom-center" />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/posts/:postId" element={<PostPage />} />
+          <Route path="/categories/:categoryId" element={<Categories />} />
+
+          <Route path="/user" element={<PrivateRouter />}>
+            <Route path="dashboard" element={<UserDashboard />} />
+            <Route path="profile-info/:userId" element={<ProfileInfo />} />
+            <Route path="update-blog/:blogId" element={<UpdateBlog />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 
