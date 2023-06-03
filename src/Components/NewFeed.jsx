@@ -84,7 +84,7 @@ function NewFeed() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid  py-4">
       <Row>
         <Col
           md={{

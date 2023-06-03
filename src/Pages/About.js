@@ -17,7 +17,7 @@ const About = () => {
     <userContext.Consumer>
       {(object) => (
         <Base>
-          <div>
+          <div className="mt-3">
             <CardGroup>
               <Card inverse>
                 <CardImg
@@ -94,7 +94,8 @@ const About = () => {
                       Co-Founder
                     </CardSubtitle>
                     <CardText>
-                     Isse jayada nikamma insan agar aap ne dudh liya matlab aap kuch bhi kr sakte hain apni life me.
+                     {/* Isse jayada nikamma insan agar aap ne dudh liya matlab aap kuch bhi kr sakte hain apni life me. */}
+                     Coming soon
                     </CardText>
                   </CardBody>
                 </Card>
@@ -113,8 +114,9 @@ const About = () => {
                       Co-Founder
                     </CardSubtitle>
                     <CardText>
-                    
-                    Ye hain zinda laas, Na kisi kaam ke na kaaz ke dusman hamare or samaaj ke.
+{/*                     
+                    Ye hain zinda laas, Na kisi kaam ke na kaaz ke dusman hamare or samaaj ke. */}
+                    Coming soon
                     </CardText>
                   </CardBody>
                 </Card>

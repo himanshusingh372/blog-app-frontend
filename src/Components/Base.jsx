@@ -2,15 +2,15 @@ import { Card, CardFooter } from "reactstrap";
 import CustomNavbar from "./CustomNavbar";
 const Base = ({ title = "Welcome to our website", children }) => {
   return (
-    <div>
-      <CustomNavbar />
+    <div className="py-4">
+      <CustomNavbar></CustomNavbar>
 
       {children}
 
       <footer
         style={{
           backgroundColor: "black",
-          padding: "10px",
+          padding: "5px",
           textAlign: "center",
           position: "fixed",
           left: 0,

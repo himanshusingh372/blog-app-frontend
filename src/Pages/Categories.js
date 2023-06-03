@@ -50,7 +50,7 @@ function Categories() {
 
   return (
     <Base>
-      <Container className="mt-3">
+      <Container className="mt-4">
         <Row>
           <Col md={2} className="pt-5">
             <CategorySideMenu />

@@ -7,7 +7,7 @@ import NewFeed from "../Components/NewFeed";
 const Home = () => {
   return (
     <Base>
-      <Container className="mt-3">
+      <Container className="mt-6">
         <Row>
           <Col md={2} className="pt-5">
             <CategorySideMenu />
