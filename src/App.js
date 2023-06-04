@@ -17,9 +17,12 @@ import PostPage from "./Pages/PostPage";
 import UserProvider from "./context/UserProvider";
 import Categories from "./Pages/Categories";
 import UpdateBlog from "./Pages/UpdateBlog";
+import { useState } from "react";
 
 function App() {
+  
   return (
+    
     <UserProvider>
       <BrowserRouter>
         <ToastContainer position="bottom-center" />
@@ -40,6 +43,8 @@ function App() {
         </Routes>
       </BrowserRouter>
     </UserProvider>
+  
+
   );
 }
 

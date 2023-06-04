@@ -51,7 +51,7 @@ function NewFeed() {
           pageNumber: data.pageNumber,
         });
 
-        console.log(data);
+        console.log(postContent);
         console.log(postContent.content.length)
       })
       .catch((error) => {

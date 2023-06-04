@@ -107,7 +107,7 @@ const PostPage = () => {
                   </CardText>
                   <div
                     className="image-container  mt-4 shadow  "
-                    style={{ maxWidth: "50%" }}
+                    style={{maxWidth:"25%" ,margin: "0 auto", display: "flex", justifyContent: "center", alignItems: "center"  }}
                   >
                     <img
                       className="img-fluid"

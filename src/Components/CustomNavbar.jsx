@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+
 import { NavLink as ReactLink, useNavigate } from "react-router-dom";
 import {
   Navbar,
@@ -15,6 +16,7 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
+  Button,
 } from "reactstrap";
 import { doLogout, getCurrentUserDetail, isLoggedIn } from "../auth";
 import userContext from "../context/userContext";
@@ -55,6 +57,7 @@ const CustomNavbar = () => {
           position: "fixed",
           top: 0,
           width: "100%",
+          height: "6%",
           zIndex: "100",
         }}
       >

@@ -13,7 +13,6 @@ export const createPost = (postData) => {
 };
 
 //get all posts
-
 export const loadAllPosts = (pageNumber, pageSize) => {
   return myAxios
     .get(
