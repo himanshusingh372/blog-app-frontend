@@ -22,14 +22,16 @@ const About = () => {
               <Card inverse>
                 <CardImg
                   alt="Card image cap"
-                 // src="https://picsum.photos/900/270?grayscale"
-                 src="https://i.ibb.co/Z8n1C4p/pexels-prakash-aryal-38326.jpg" 
+                  // src="https://picsum.photos/900/270?grayscale"
+                  src="https://i.ibb.co/Z8n1C4p/pexels-prakash-aryal-38326.jpg"
                   style={{
-                    height: 220,
+                    height: 250,
                   }}
                   width="100%"
                 />
-                <CardImgOverlay>
+                <CardImgOverlay
+                  style={{ overflowY: "scroll", maxHeight: "300px" }}
+                >
                   <CardTitle tag="h5">
                     <h2>BLOGGING APPLICATION</h2>
                   </CardTitle>
@@ -50,19 +52,13 @@ const About = () => {
                       Welcome : {object.user.login && object.user.data.name}
                     </h1>
                   </CardText>
-                  <CardText>
-                    <small className="text-muted">
-                   
-                    </small>
-                  </CardText>
                 </CardImgOverlay>
               </Card>
 
-              <CardGroup>
-                <Card>
+              <CardGroup className="pt-2">
+                <Card className="mr-4">
                   <CardImg
                     alt="Card image cap"
-                   // src="https://picsum.photos/318/180"
                     src="https://i.ibb.co/9TMwjsV/my2.jpg"
                     top
                     width="80%"
@@ -74,16 +70,17 @@ const About = () => {
                       Founder
                     </CardSubtitle>
                     <CardText>
-                     Skilled in Backend and Frontend Technologies.{<br/>}
-                     Expert in java and Java Framework.
+                      Skilled in Backend and Frontend Technologies.
+                      <br />
+                      Expert in Java and Java Framework.
                     </CardText>
                   </CardBody>
                 </Card>
-                <Card>
+
+                <Card className="mr-4">
                   <CardImg
                     alt="Card image cap"
-                    //src="https://picsum.photos/318/180"
-                   src="https://i.ibb.co/NFXyTsk/abhi2.jpg"
+                    src="https://i.ibb.co/NFXyTsk/abhi2.jpg"
                     top
                     width="80%"
                     height="70%"
@@ -93,16 +90,13 @@ const About = () => {
                     <CardSubtitle className="mb-2 text-muted" tag="h6">
                       Co-Founder
                     </CardSubtitle>
-                    <CardText>
-                     {/* Isse jayada nikamma insan agar aap ne dudh liya matlab aap kuch bhi kr sakte hain apni life me. */}
-                     Coming soon
-                    </CardText>
+                    <CardText>Coming soon</CardText>
                   </CardBody>
                 </Card>
+
                 <Card>
                   <CardImg
                     alt="Card image cap"
-                    //src="https://picsum.photos/318/180"
                     src="https://i.ibb.co/0nB3YNN/arvi.jpg"
                     top
                     width="80%"
@@ -113,11 +107,7 @@ const About = () => {
                     <CardSubtitle className="mb-2 text-muted" tag="h6">
                       Co-Founder
                     </CardSubtitle>
-                    <CardText>
-{/*                     
-                    Ye hain zinda laas, Na kisi kaam ke na kaaz ke dusman hamare or samaaj ke. */}
-                    Coming soon
-                    </CardText>
+                    <CardText>Coming soon</CardText>
                   </CardBody>
                 </Card>
               </CardGroup>

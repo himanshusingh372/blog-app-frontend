@@ -64,6 +64,9 @@ const Login = () => {
             data: data.user,
             login: true,
           });
+          // if(loginData.username==="himanshu@gmail"||"Himanshu@gmail")
+          // navigate("/Admin")
+          // else{
           navigate("/user/dashboard")
         });
         toast.success("Login Succes");

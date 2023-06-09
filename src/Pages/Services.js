@@ -15,7 +15,8 @@ const Services = () => {
   return (
     <userContext.Consumer>
       {(object) => (
-        <Base>
+        <Base >
+        <div className="my-4">
           <CardGroup>
             <Card>
               <CardImg
@@ -50,7 +51,7 @@ const Services = () => {
                   For version above 7
                 </CardSubtitle>
                 <CardText>
-               <h5>We are professional in Android. since 2010.</h5><br/> <br/>
+               <h5>We are professional in Android. since 2010.</h5><br/>
                 ,<h6>Any Android device you have does't matter we have always Solution. This website is just example of our experties.</h6>
                 </CardText>
               </CardBody>
@@ -76,6 +77,7 @@ const Services = () => {
               </CardBody>
             </Card>
           </CardGroup>
+          </div>
         </Base>
       )}
     </userContext.Consumer>

@@ -57,7 +57,7 @@ const CustomNavbar = () => {
           position: "fixed",
           top: 0,
           width: "100%",
-          height: "6%",
+          // height: "8%",
           zIndex: "100",
         }}
       >
@@ -84,7 +84,13 @@ const CustomNavbar = () => {
               </NavLink>
             </NavItem>
 
-            <UncontrolledDropdown inNavbar nav>
+            <NavItem>
+              <NavLink tag={ReactLink} to="/contactus">
+                Contact Us
+              </NavLink>
+            </NavItem>
+
+            {/* <UncontrolledDropdown inNavbar nav>
               <DropdownToggle caret nav>
                 More
               </DropdownToggle>
@@ -98,27 +104,32 @@ const CustomNavbar = () => {
                 <DropdownItem>Instagram</DropdownItem>
                 <DropdownItem>LinkedIn</DropdownItem>
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
           </Nav>
 
           <Nav navbar>
             {login && (
               <>
-                <NavItem>
-                  <NavLink tag={ReactLink} to={`/user/profile-info/${user.id}`}>
-                    Profile Info
-                  </NavLink>
-                </NavItem>
-
-                <NavItem>
-                  <NavLink tag={ReactLink} to="/user/dashboard">
+                <UncontrolledDropdown inNavbar nav>
+                  <DropdownToggle caret nav>
                     {user.email}
-                  </NavLink>
-                </NavItem>
-
-                <NavItem>
-                  <NavLink onClick={logout}>Logout</NavLink>
-                </NavItem>
+                  </DropdownToggle>
+                  <DropdownMenu right>
+                    <DropdownItem
+                      tag={ReactLink}
+                      to={`/user/profile-info/${user.id}`}
+                    >
+                      Profile Info
+                    </DropdownItem>
+                    <DropdownItem tag={ReactLink} to="/user/dashboard">
+                      Dashboard
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem onClick={logout} className="curser">
+                      Logout
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </>
             )}
 

@@ -16,3 +16,9 @@ export const logIn = (loginDetails) => {
 export const getUser = (userId) => {
   return myAxios.get(`/users/${userId}`).then((resp) => resp.data);
 };
+
+export const GetAllUsers = () => {
+  return myAxios.get("/users/").then((Response) => {
+    return Response.data;
+  });
+};

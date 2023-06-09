@@ -12,41 +12,10 @@ import { useState } from "react";
 const Base = ({ title = "Welcome to our website", children }) => {
   const [zoomLevel, setZoomLevel] = useState(1);
 
-  // Function to zoom in
-  const zoomIn = () => {
-    setZoomLevel(zoomLevel + 0.1);
-  };
-
-  // Function to zoom out
-  const zoomOut = () => {
-    setZoomLevel(zoomLevel - 0.1);
-  };
-
   return (
-    <div className="py-4">
+    <div>
       <CustomNavbar />
-      {/* <Container>
-      <Badge
-        color="secondary"
-        onClick={zoomIn}
-        style={{  position: "fixed", top: "50px", right: "100px", zIndex: "100",cursor:"pointer" }}
-      >
-        Zoom In
-      </Badge>
-
-      <Badge
-      color="secondary"
-        onClick={zoomOut}
-        style={{   position: "fixed", top: "50px", right: "20px", zIndex: "100",cursor:"pointer"}}
-      >
-        Zoom Out
-      </Badge>
-      </Container>
-
-      <Container> */}
-        {/* <div style={{ transform: `scale(${zoomLevel})` }}> */}
-        {children}
-      {/* </Container> */}
+      <Container className=" pt-5 pb-5">{children}</Container>
       <footer
         style={{
           backgroundColor: "black",

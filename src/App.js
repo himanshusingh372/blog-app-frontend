@@ -18,6 +18,8 @@ import UserProvider from "./context/UserProvider";
 import Categories from "./Pages/Categories";
 import UpdateBlog from "./Pages/UpdateBlog";
 import { useState } from "react";
+import Admin from "./Pages/Admin";
+import ContactUsPage from "./Pages/Contactus";
 
 function App() {
   
@@ -32,6 +34,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          {/* <Route path="/Admin" element={<Admin/>}/> */}
+         <Route path="/contactus" element={<ContactUsPage/>}/>
           <Route path="/posts/:postId" element={<PostPage />} />
           <Route path="/categories/:categoryId" element={<Categories />} />
 
