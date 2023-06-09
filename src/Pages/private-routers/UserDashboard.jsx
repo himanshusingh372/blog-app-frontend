@@ -2,7 +2,7 @@ import React from 'react'
 import AddPost from '../../Components/AddPost'
 import Base from '../../Components/Base'
 import { Container } from 'reactstrap'
-import NewFeed from '../../Components/NewFeed'
+
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { getCurrentUserDetail } from '../../auth'

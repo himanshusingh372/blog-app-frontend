@@ -102,12 +102,17 @@ const PostPage = () => {
                     }}
                   ></div>
 
-                  <CardText className="mt-3">
-                    <h1>{post.title}</h1>
-                  </CardText>
+                  <h1 className="mt-3">{post.title}</h1>
+
                   <div
                     className="image-container  mt-4 shadow  "
-                    style={{maxWidth:"25%" ,margin: "0 auto", display: "flex", justifyContent: "center", alignItems: "center"  }}
+                    style={{
+                      maxWidth: "25%",
+                      margin: "0 auto",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     <img
                       className="img-fluid"
@@ -147,7 +152,7 @@ const PostPage = () => {
                 <Input
                   type="textarea"
                   placeholder="Enter comment here"
-                  value={comment.comment}
+                  value={comment.content}
                   onChange={(event) =>
                     setComment({ content: event.target.value })
                   }
